@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'Yihua',
+      // name: 'Yihua',
+      name: { firstName: 'Kaloyan', lastName: 'Ganchev' },
       company: 'ZTM',
     };
   }
@@ -17,11 +18,19 @@ class App extends Component {
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <p>
-            Hi {this.state.name}, I work at {this.state.company}
+            Hi {this.state.name.firstName} {this.state.name.lastName}, I work at{' '}
+            {this.state.company}.
           </p>
           <button
             onClick={() => {
-              this.setState({ name: 'Kaloyan' });
+              // this.setState({
+              //   name: { firstName: 'Yihua', lastName: 'Zhang' },
+              // }); // calling a callback function is a better way -> down:
+              this.setState(() => {
+                return {
+                  name: { firstName: 'Yihua', lastName: 'Zhang' },
+                };
+              });
             }}
           >
             Change Name
