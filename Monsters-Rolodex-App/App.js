@@ -12,11 +12,11 @@ class App extends Component {
       monsters: [],
       searchField: '',
     };
-    console.log('constructor');
+    // console.log('constructor');
   }
 
   componentDidMount() {
-    console.log('componentDidMount');
+    // console.log('componentDidMount');
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) =>
@@ -40,7 +40,7 @@ class App extends Component {
   };
 
   render() {
-    console.log('render');
+    // console.log('render');
 
     const { monsters, searchField } = this.state;
     const { onSearchChange } = this;
