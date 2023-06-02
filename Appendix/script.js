@@ -1,4 +1,5 @@
 const arr = [1, 2, 3, 4, 5, 6, 7];
+const arrStr = ['abc', 'def', 'ghj', 'klm', 'nop'];
 
 // // 1. map() returns a new array based on a function:
 // const arrMap = arr.map((n) => n * 3);
@@ -94,7 +95,7 @@ const arr = [1, 2, 3, 4, 5, 6, 7];
 // console.log(petya.name);
 // console.log(petya.attack());
 
-//// Instantionation
+//// Instantiation
 
 class Character {
   constructor(name, weapon) {
